@@ -11,9 +11,13 @@ export default function PromotionCard ({ promotion }) {
                <span> R$ {promotion.price} </span>
 
                <footer>
-                   {promotion.comments.length > 0 && (
+                   {promotion.comments.length > 0 ? (
                        <div className={styles.promotion_card_comment}>
                            "{promotion.comments[0].comment}"
+                       </div>
+                   ) : (
+                       <div className={styles.promotion_card_comment} style={{color: 'var(--gray-50)'}}>
+                           aaaaaaaaaaaaaa
                        </div>
                    )}
 
