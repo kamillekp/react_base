@@ -1,4 +1,5 @@
 import React from 'react';
+import './global.scss'
 
 import PromotionCard from './components/Promotion/Card/index';
  
@@ -12,14 +13,16 @@ function App() {
     "comments": [
       {
         "id": 1,
-        "comment": "Full HD LED Windows 10"
+        "comment": "Full HD LED | Windows 10"
       }
     ]
   }
 
   return (
     <div className="App">
-      <PromotionCard promotion={promotion} />
+      <div className='smoller_app'>
+        <PromotionCard promotion={promotion} />
+      </div>
     </div>
   );
 }

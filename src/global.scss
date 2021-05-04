@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500&display=swap');
+
+:root {
+    --gray-50: #FBFBFB;
+    --gray-60: #d0d0d0;
+    --gray-100: #BFBFBF;
+    --gray-150: #B6B6B6;
+    --gray-300: #606060;
+
+    --yellow: #E0BE46;
+
+    --purple: #941F94;
+}
+
+.App {  
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+.smoller_app {
+    max-width: 800px;
+    margin: 30px;
+}
+
+body {
+    background-color: var(--gray-50);
+}

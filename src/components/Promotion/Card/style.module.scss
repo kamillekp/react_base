@@ -1,0 +1,64 @@
+.promotion_card {
+    border-radius: 5px;
+    border: 1px solid var(--gray-60);
+
+    box-shadow: 0 2px 7px 0 var(--gray-60);
+
+    display: flex;
+    align-items: flex-start;
+    padding: 15px;
+    padding-right: 30px;
+    
+    img {
+        max-width: 110px;
+        margin-right: 20px;
+    }
+
+    .promotion_card_info {
+        font-family: Noto Sans JP, sans-serif;
+
+        h1 {
+            color: var(--gray-300);
+            font-weight: 400;
+            font-size: 16px;
+        }
+
+        span {
+            color: var(--purple);
+            font-weight: 500;
+            font-size: 25px;
+        }
+
+        footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .promotion_card_comment {
+                color: var(--gray-100);
+                font-weight: 400;
+                font-size: 14px;
+            }
+
+            .promotion_card_commentsCount {
+                color: var(--purple);
+                font-weight: 400;
+                font-size: 14px;
+
+                margin-left: 85px;
+            }
+
+            a {
+                color: var(--purple);
+                font-weight: 400;
+                font-size: 14px;
+
+                text-decoration: none;
+                border: 1px solid var(--purple);
+                border-radius: 5px;
+                padding: 5px;
+            }
+        }
+    }
+
+}
