@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import api from '../../Services/api';
 import styles from './styles.module.scss';
 
-import PromotionCard from '../../components/Card/index';
+import ComponentsList from '../List/index';
 
 export default function CompentsSearch () {
     const [promotions, setPromotions] = useState ([]);
@@ -12,21 +12,22 @@ export default function CompentsSearch () {
 
     useEffect (() => {
         async function  takeData () {
-            const response = await api.get('promotions/?_embed=comments');
-            setPromotions(response.data);
-        }
-        async function  searchDatas () {
-            const response = await api.get('promotions/?_embed=comments');
+            const params = {};
+            if (search) {
+                params.title_like = search;
+            }
+
+            const response = await api.get('promotions/?_embed=comments', {params});
             setPromotions(response.data);
         }
         takeData();
-    }, [])
+    }, [search])
 
     return (
         <div className={styles.promotion_search}>
             <header>
                 <h1>PROMO SHOW</h1>
-                <Link to='/create' className={styles.promotion_link}>NOVA PROMOÇÃO</Link>
+                <Link to='/register' className={styles.promotion_link}>NOVA PROMOÇÃO</Link>
             </header>
 
             <section>
@@ -38,9 +39,10 @@ export default function CompentsSearch () {
                 />
             </section>
 
-            {promotions.map((promotion) => (
-                <PromotionCard promotion={promotion} />
-              ))}
+            <ComponentsList 
+                promotions={promotions} 
+                loading={!promotions.length} 
+            />
         </div>
     );
 }

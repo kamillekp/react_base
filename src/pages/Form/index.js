@@ -1,17 +1,12 @@
 import React from 'react';
-import { useParams } from 'react-router-dom';
 
-import styles from './styles.module.scss';
+import ComponentsForm from '../../components/Form/index';
+import UICentralizedContainer from '../../components/UI/Centralized_Container/index';
 
 export default function PagesForm () {
-    const { id } = useParams();
-
     return (
-    <div>
-        FORM
-        {id && (
-            <div>id: {id}</div>
-        )}
-    </div>
+        <UICentralizedContainer>
+            <ComponentsForm />
+        </UICentralizedContainer>
     );
 }
