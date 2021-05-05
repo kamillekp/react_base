@@ -1,21 +1,63 @@
 .components_form {
-    h1 {
+    font-family: Noto Sans JP, sans-serif;
 
+    h1 {
+        color: var(--gray-300);
+        font-weight: 500;
+        font-size: 30px;
     }
 
     h2 {
+        color: vaR(--yellow);
+        font-weight: 400;
+        font-size: 20px;
 
+        margin-top: -15px;
+        margin-bottom: 40px;
     }
 
     form {
         .components_form {
+            display: flex;
+            flex-direction: column;
+
             label {
-
+                color: var(--purple);
+                font-weight: 400;
+                font-size: 16px;
             }
 
-            input {
+            input { 
+                width: 450px;
+                height: 20px;
+                padding: 5px;
+                
+                color: var(--gray-150);
+                font-size: 16px;
 
+                background-color: transparent;
+                
+                outline: none;
+                border: 2px solid var(--gray-150);
+                border-radius: 5px;
             }
+        }
+
+        button {
+            background-color: transparent;
+            border: 2px solid var(--purple);
+            border-radius: 5px;
+    
+            color: var(--purple);
+            font-weight: 400;
+            font-size: 20px;
+    
+            padding: 5px;
+            padding-left: 10px;
+            padding-right: 10px;
+            margin-top: 40px;
+            position: relative;
+            left: 385px;
         }
     }
 }

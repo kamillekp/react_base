@@ -24,8 +24,9 @@ export default function ComponentsForm () {
                     <input id='image' name='image' type='text' /> <br/>
 
                     <label htmlFor='price'>Price</label>
-                    <input id='price' name='price' type='text' />
+                    <input id='price' name='price' type='numeric' />
                 </div>
+                <button type='submit'>Salvar</button>
             </form>
         </div>
     );
