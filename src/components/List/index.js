@@ -15,7 +15,9 @@ export default function ComponentsList ({ loading, promotions }) {
     return (
         <div>
             {promotions.map((promotion) => (
-                <ComponentsCard promotion={promotion} />
+                <li key = {promotion.id} style = {{ listStyleType: 'none' }}>
+                    <ComponentsCard promotion={promotion} />
+                </li>
             ))}
         </div>
     );
