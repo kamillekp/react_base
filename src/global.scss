@@ -8,11 +8,18 @@
     --gray-300: #606060;
 
     --yellow: #E0BE46;
+    --yellow-50: #ebe0bb;
+
 
     --purple: #941F94;
+    
+    --pink: #e6c5e6;
 }
 
 body {
     background-color: var(--gray-50);
 }
 
+button {
+    cursor: pointer;
+}

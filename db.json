@@ -1,44 +1,51 @@
 {
-    "promotions": [
-      {
-        "id": 1,
-        "title": "Samsung Notebook Flash F30",
-        "price": 2600,
-        "imageUrl": "https://images.samsung.com/is/image/samsung/br-notebook-flash-f30-np530xbb-ad3br-np530xbb-ad3br-Aquarela-152176151?$720_576_PNG$",
-        "url": "https://www.samsung.com/br/pc/notebook/notebook-flash-f30-np530xbb-ad3br/"
-      },
-      {
-        "id": 2,
-        "title": "TopSocket Bola de Vôlei",
-        "price": 350,
-        "imageUrl": "https://cdn.ecvol.com/s/www.querocase.com.br/produtos/topsocket-bola-de-volei/z/0.png?v=0",
-        "url": "https://www.querocase.com.br/topsocket-bola-de-volei"
-      },
-      {
-        "id": 3,
-        "title": "Tênis Nike LeBron Soldier XIII SFG Unissex",
-        "price": 299.99,
-        "imageUrl": "https://images.lojanike.com.br/1024x1024/produto/tenis-nike-lebron-soldier-xiii-sfg-unissex-AR4225-500-1.png",
-        "url": "https://www.nike.com.br/tenis-nike-lebron-soldier-xiii-sfg-unissex-153-169-172-171077"
-      },
-      {
-        "id": 4,
-        "title": "Fone de Ouvido JBL Duet BT",
-        "price": 345.90,
-        "imageUrl": "https://www.jbl.com.br/on/demandware.static/-/Sites-masterCatalog_Harman/default/dw72490c39/JBL_duetbt_03_black-high-1606x1606px.png",
-        "url": "https://www.jbl.com.br/fones-de-ouvido-bluetooth/JBL+DUET+BT.html"
-      }
-    ],
-    "comments": [
-      {
-        "id": 1,
-        "comment": "TELA FULL HD",
-        "promotionId": 1
-      },
-      {
-        "id": 2,
-        "comment": "de R$ 399,90 por R$ 350 à vista ou R$ 370,00 em 5x sem juros",
-        "promotionId": 2
-      }
-    ]
-  }
+  "promotions": [
+    {
+      "id": 1,
+      "title": "Samsung Notebook Flash F30",
+      "price": 2600,
+      "imageUrl": "https://images.samsung.com/is/image/samsung/br-notebook-flash-f30-np530xbb-ad3br-np530xbb-ad3br-Aquarela-152176151?$720_576_PNG$",
+      "url": "https://www.samsung.com/br/pc/notebook/notebook-flash-f30-np530xbb-ad3br/"
+    },
+    {
+      "id": 2,
+      "title": "TopSocket Bola de Vôlei",
+      "price": 350,
+      "imageUrl": "https://cdn.ecvol.com/s/www.querocase.com.br/produtos/topsocket-bola-de-volei/z/0.png?v=0",
+      "url": "https://www.querocase.com.br/topsocket-bola-de-volei"
+    },
+    {
+      "id": 3,
+      "title": "Tênis Nike LeBron Soldier XIII SFG Unissex",
+      "price": 299.99,
+      "imageUrl": "https://images.lojanike.com.br/1024x1024/produto/tenis-nike-lebron-soldier-xiii-sfg-unissex-AR4225-500-1.png",
+      "url": "https://www.nike.com.br/tenis-nike-lebron-soldier-xiii-sfg-unissex-153-169-172-171077"
+    },
+    {
+      "id": 4,
+      "title": "Fone de Ouvido JBL Duet BT",
+      "price": 345.9,
+      "imageUrl": "https://www.jbl.com.br/on/demandware.static/-/Sites-masterCatalog_Harman/default/dw72490c39/JBL_duetbt_03_black-high-1606x1606px.png",
+      "url": "https://www.jbl.com.br/fones-de-ouvido-bluetooth/JBL+DUET+BT.html"
+    },
+    {
+      "title": "Three Dogs Original Filhotes Raças Médias e Grandes 10,1kg",
+      "url": "https://www.agromeyer.com.br/petshop-porto-alegre/three-dogs-original-filhotes-racas-medias-e-grandes-101kg/",
+      "imageUrl": "https://www.agromeyer.com.br/wp-content/uploads/2018/10/5bb4f45b1b462-tdo-filhotes-racas-grandes-frente.png",
+      "price": "95",
+      "id": 5
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "comment": "TELA FULL HD",
+      "promotionId": 1
+    },
+    {
+      "id": 2,
+      "comment": "de R$ 399,90 por R$ 350 à vista ou R$ 370,00 em 5x sem juros",
+      "promotionId": 2
+    }
+  ]
+}

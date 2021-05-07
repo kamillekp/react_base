@@ -52,6 +52,10 @@
                 font-size: 14px;
 
                 margin-left: 20px;
+
+                &:hover {
+                    color: var(--pink);
+                }
             }
 
             a {
@@ -63,6 +67,10 @@
                 border: 2px solid var(--purple);
                 border-radius: 5px;
                 padding: 5px;
+
+                &:hover {
+                    background-color: var(--pink);
+                }
             }
         }
     }

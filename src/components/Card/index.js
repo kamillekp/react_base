@@ -3,7 +3,7 @@ import styles from './style.module.scss'
 
 export default function ComponentsCard ({ promotion }) {
     return (
-        <div className={styles.promotion_card}>
+        <div className={styles.promotion_card} >
            <img src={promotion.imageUrl} alt={promotion.title}/> 
 
             <div className={styles.promotion_card_info}>

@@ -17,7 +17,7 @@ export default function CompentsSearch () {
                 params.title_like = search;
             }
 
-            const response = await api.get('promotions/?_embed=comments', {params});
+            const response = await api.get('promotions/?_embed=comments&_order=desc&_sort=id', {params});
             setPromotions(response.data);
         }
         takeData();

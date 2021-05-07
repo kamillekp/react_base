@@ -15,7 +15,7 @@ export default function ComponentsList ({ loading, promotions }) {
     return (
         <div>
             {promotions.map((promotion) => (
-            <ComponentsCard promotion={promotion} />
+                <ComponentsCard promotion={promotion} />
             ))}
         </div>
     );
