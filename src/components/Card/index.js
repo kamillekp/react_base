@@ -1,5 +1,7 @@
 import React from  'react';
-import styles from './style.module.scss'
+import styles from './style.module.scss';
+
+import { Link } from 'react-router-dom';
 
 export default function ComponentsCard ({ promotion }) {
     return (
@@ -33,6 +35,8 @@ export default function ComponentsCard ({ promotion }) {
                     >
                         IR PARA O SITE
                     </a>
+
+                    <Link to={`/edit/${promotion.id}`}> EDITAR </Link>
                </footer>
             </div>
         </div>
