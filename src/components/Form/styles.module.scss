@@ -1,10 +1,17 @@
 .components_form {
     font-family: Noto Sans JP, sans-serif;
+    min-width: 700px;
 
-    h1 {
-        color: var(--gray-300);
-        font-weight: 500;
-        font-size: 30px;
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        h1 {
+            color: var(--gray-300);
+            font-weight: 500;
+            font-size: 30px;
+        }
     }
 
     h2 {

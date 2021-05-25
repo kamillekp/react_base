@@ -1,33 +1,33 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
  
-import api from '../../Services/api';
+import useApi from '../utils/useApi';
 import styles from './styles.module.scss';
 
 import ComponentsList from '../List/index';
 
 export default function CompentsSearch () {
-    const [promotions, setPromotions] = useState ([]);
     const [search, setSearch] = useState ('');
+    const [load, loadInfo] = useApi({
+        url: 'promotions',
+        method: 'get',
+        params: {
+          _embed: 'comments',
+          _order: 'desc',
+          _sort: 'id',
+          title_like: search || undefined,
+        },
+      });
 
-    useEffect (() => {
-        async function  takeData () {
-            const params = {};
-            if (search) {
-                params.title_like = search;
-            }
-
-            const response = await api.get('promotions/?_embed=comments&_order=desc&_sort=id', {params});
-            setPromotions(response.data);
-        }
-        takeData();
-    }, [search])
+      useEffect(() => {
+        load();
+      }, [search]);
 
     return (
         <div className={styles.promotion_search}>
             <header>
                 <h1>PROMO SHOW</h1>
-                <Link to='/register' className={styles.promotion_link}>NOVA PROMOÇÃO</Link>
+                <Link to='/register' className='promotion_link'>NOVA PROMOÇÃO</Link>
             </header>
 
             <section>
@@ -40,8 +40,9 @@ export default function CompentsSearch () {
             </section>
 
             <ComponentsList 
-                promotions={promotions} 
-                loading={!promotions.length} 
+                 promotions={loadInfo.data}
+                 loading={loadInfo.loading}
+                 error={loadInfo.error}
             />
         </div>
     );

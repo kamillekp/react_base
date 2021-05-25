@@ -13,21 +13,6 @@
             font-weight: 500;
             font-size: 30px;
         }
-    
-        .promotion_link {
-            color: var(--yellow);
-            font-weight: 400;
-            font-size: 14px;
-            text-decoration: none;
-    
-            border: 2px solid var(--yellow);
-            border-radius: 5px;
-            padding: 5px;
-
-            &:hover {
-                background-color: var(--yellow-50);
-            }
-        }
     }
 
     section {
