@@ -38,6 +38,7 @@ export default function ComponentsForm ({ id }) {
         if(id) {
             load();
         }
+        //eslint-disable-next-line react-hooks/exhaustive-deps
     }, [id])
 
     function onChange (e) {

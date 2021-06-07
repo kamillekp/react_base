@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import api from '../../Services/api';
 
+import useDebouncePromise from '../utils/useDebouncePromise';
+
 const initialRequestInfo = {
   error: null,
   data: null,
@@ -9,6 +11,7 @@ const initialRequestInfo = {
 
 export default function useApi(config) {
   const [requestInfo, setRequestInfo] = useState(initialRequestInfo)
+  const debounceApi = useDebouncePromise(api, config.debounceDelay)
 
   async function call(localConfig) {
     setRequestInfo({
@@ -17,11 +20,15 @@ export default function useApi(config) {
     });
     
     let response = null;
+
+    const finalConfig = {
+      ...config,
+      ...localConfig,
+    }
+
+    const fn = finalConfig.debounced ? debounceApi : api;
     try {
-      response = await api({
-        ...config,
-        ...localConfig,
-      });
+      response = await fn(finalConfig);
 
       setRequestInfo({
         ...initialRequestInfo,
@@ -38,6 +45,7 @@ export default function useApi(config) {
     if (config.onCompleted) {
       config.onCompleted(response);
     }
+    return response;
   }
 
   return [

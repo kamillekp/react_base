@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import { Link } from 'react-router-dom';
  
 import useApi from '../utils/useApi';
@@ -7,8 +7,10 @@ import styles from './styles.module.scss';
 import ComponentsList from '../List/index';
 
 export default function CompentsSearch () {
+    const mounteRef = useRef(null);
     const [search, setSearch] = useState ('');
     const [load, loadInfo] = useApi({
+        debounceDelay: 500,
         url: 'promotions',
         method: 'get',
         params: {
@@ -20,7 +22,14 @@ export default function CompentsSearch () {
       });
 
       useEffect(() => {
-        load();
+        load({
+            debounced: mounteRef.current,
+        });
+
+        if(!mounteRef.current) {
+            mounteRef.current = true;
+        }
+        //eslint-disable-next-line react-hooks/exhaustive-deps
       }, [search]);
 
     return (
